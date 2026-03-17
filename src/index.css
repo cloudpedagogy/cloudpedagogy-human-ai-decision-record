@@ -1,0 +1,125 @@
+:root {
+  /* Core Palette - Slate & Emerald */
+  --color-primary: #059669; /* Emerald 600 */
+  --color-primary-light: #ecfdf5; /* Emerald 50 */
+  --color-primary-dark: #065f46; /* Emerald 800 */
+  
+  --color-bg-body: #f8fafc; /* Slate 50 */
+  --color-bg-panel: #ffffff;
+  
+  --color-text-main: #1e293b; /* Slate 800 */
+  --color-text-muted: #64748b; /* Slate 500 */
+  
+  --border-color: #e2e8f0; /* Slate 200 */
+  --color-border: #e2e8f0;
+  
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Shadows & Radius */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+
+  /* Typography */
+  --font-family-main: system-ui, -apple-system, sans-serif;
+  --font-family-serif: 'Georgia', serif;
+  
+  --text: var(--color-text-muted);
+  --text-h: var(--color-text-main);
+  --bg: var(--color-bg-body);
+  --border: var(--color-border);
+  --code-bg: #f1f5f9;
+  --accent: var(--color-primary);
+  --accent-bg: var(--color-primary-light);
+  --accent-border: #10b98180;
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow: var(--shadow-md);
+
+  font: 16px/1.6 var(--font-family-main);
+  letter-spacing: 0.01em;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+
+/* Form Input Visiblity Fix */
+input[type='text'], input[type='number'], input[type='date'], select, textarea {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  background-color: #ffffff;
+  outline: none;
+  border-color: var(--color-primary);
+}
+

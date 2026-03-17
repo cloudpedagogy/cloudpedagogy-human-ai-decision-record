@@ -1,0 +1,288 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Human-AI Decision Record",
+    "description": "A structured schema for recording, reviewing, and auditing decisions influenced by AI.",
+    "type": "object",
+    "properties": {
+        "Metadata": {
+            "type": "object",
+            "properties": {
+                "record_id": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "record_title": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string",
+                    "default": "1.0"
+                },
+                "status": {
+                    "type": "string",
+                    "enum": [
+                        "draft",
+                        "final"
+                    ]
+                },
+                "date_created": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "date_modified": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "created_by_name": {
+                    "type": "string"
+                },
+                "created_by_role": {
+                    "type": "string"
+                },
+                "organisation": {
+                    "type": "string"
+                },
+                "team_or_department": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "record_id",
+                "record_title",
+                "status",
+                "date_created"
+            ]
+        },
+        "DecisionContext": {
+            "type": "object",
+            "properties": {
+                "decision_context_summary": {
+                    "type": "string"
+                },
+                "problem_or_question": {
+                    "type": "string"
+                },
+                "decision_type": {
+                    "type": "string",
+                    "enum": [
+                        "policy",
+                        "operational",
+                        "academic",
+                        "research",
+                        "clinical",
+                        "admin",
+                        "governance",
+                        "other"
+                    ]
+                },
+                "organisational_context": {
+                    "type": "string"
+                },
+                "decision_scope": {
+                    "type": "string"
+                },
+                "impact_level": {
+                    "type": "string",
+                    "enum": [
+                        "low",
+                        "medium",
+                        "high",
+                        "critical"
+                    ]
+                },
+                "stakeholders_affected": {
+                    "type": "string"
+                },
+                "urgency": {
+                    "type": "string"
+                }
+            }
+        },
+        "AIInvolvement": {
+            "type": "object",
+            "properties": {
+                "ai_used": {
+                    "type": "boolean"
+                },
+                "ai_system_name": {
+                    "type": "string"
+                },
+                "ai_system_type": {
+                    "type": "string"
+                },
+                "ai_purpose": {
+                    "type": "string"
+                },
+                "prompt_summary": {
+                    "type": "string"
+                },
+                "ai_output_summary": {
+                    "type": "string"
+                },
+                "reliance_level": {
+                    "type": "string",
+                    "enum": [
+                        "low",
+                        "moderate",
+                        "high"
+                    ]
+                },
+                "ai_use_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "reliability_notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "HumanInterpretation": {
+            "type": "object",
+            "properties": {
+                "interpretation_summary": {
+                    "type": "string"
+                },
+                "contextual_knowledge_applied": {
+                    "type": "string"
+                },
+                "modifications_or_corrections": {
+                    "type": "string"
+                },
+                "disagreements_with_ai": {
+                    "type": "string"
+                },
+                "alternative_interpretations": {
+                    "type": "string"
+                },
+                "uncertainty_notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "AssumptionsAndLimitations": {
+            "type": "object",
+            "properties": {
+                "data_assumptions": {
+                    "type": "string"
+                },
+                "model_limitations": {
+                    "type": "string"
+                },
+                "contextual_uncertainties": {
+                    "type": "string"
+                },
+                "external_constraints": {
+                    "type": "string"
+                },
+                "missing_information": {
+                    "type": "string"
+                },
+                "confidence_limitations": {
+                    "type": "string"
+                }
+            }
+        },
+        "RisksAndSafeguards": {
+            "type": "object",
+            "properties": {
+                "bias_risk": {
+                    "type": "string"
+                },
+                "operational_risk": {
+                    "type": "string"
+                },
+                "reputational_risk": {
+                    "type": "string"
+                },
+                "governance_risk": {
+                    "type": "string"
+                },
+                "legal_or_policy_risk": {
+                    "type": "string"
+                },
+                "ethical_concerns": {
+                    "type": "string"
+                },
+                "privacy_concerns": {
+                    "type": "string"
+                },
+                "mitigation_strategies": {
+                    "type": "string"
+                },
+                "safeguards_applied": {
+                    "type": "string"
+                },
+                "escalation_required": {
+                    "type": "boolean"
+                },
+                "escalation_notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "DecisionOutcome": {
+            "type": "object",
+            "properties": {
+                "final_decision": {
+                    "type": "string"
+                },
+                "rationale": {
+                    "type": "string"
+                },
+                "accountable_decision_maker": {
+                    "type": "string"
+                },
+                "accountable_role": {
+                    "type": "string"
+                },
+                "approval_required": {
+                    "type": "boolean"
+                },
+                "approver_name_or_role": {
+                    "type": "string"
+                },
+                "implementation_considerations": {
+                    "type": "string"
+                },
+                "follow_up_actions": {
+                    "type": "string"
+                },
+                "review_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "review_trigger": {
+                    "type": "string"
+                }
+            }
+        },
+        "Reflection": {
+            "type": "object",
+            "properties": {
+                "lessons_learned": {
+                    "type": "string"
+                },
+                "workflow_improvements": {
+                    "type": "string"
+                },
+                "reflection_notes": {
+                    "type": "string"
+                }
+            }
+        },
+        "SystemDerived": {
+            "type": "object",
+            "properties": {
+                "traceability_index": {
+                    "type": "integer"
+                },
+                "required_fields_complete": {
+                    "type": "boolean"
+                },
+                "export_ready": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
