@@ -47,3 +47,7 @@ All processing happens entirely in the browser.
 This tool is a concrete application within the domain of Human-AI Governance Engineering. It visibly operationalizes the principle that "decisions influenced by AI should remain transparent, traceable, and accountable."
 
 Unlike typical AI capabilities, which focus on developing human competence, this tool is designed entirely through **Capability-Driven Development (CDD)**—a design method that builds systems deeply rooted in capability and governance requirements rather than mere user convenience.
+
+## 📄 License
+
+Part of the CloudPedagogy ecosystem. Open-source under the MIT License.
