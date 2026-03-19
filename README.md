@@ -15,7 +15,7 @@ This tool solves that problem by producing a **Human-AI Decision Record**.
 ## Who is it For
 Professionals, individuals, and organizations who need to ensure their AI-supported decisions remain transparent, traceable, accountable, and defensible.
 
-## 🌐 Live Link
+## 🌐 Live Application
 
 👉 http://cloudpedagogy-human-ai-decision-record.s3-website.eu-west-2.amazonaws.com/
 
@@ -27,59 +27,37 @@ Professionals, individuals, and organizations who need to ensure their AI-suppor
 
 
 ---
-## How to Run It
+## 🛠️ Getting Started
 
-The application runs entirely in the browser but requires a local setup to run.
+### Clone the repository
 
-### 1. Install dependencies
+```bash
+git clone [repository-url]
+cd [repository-folder]
+```
 
-Run the following command to install the required packages:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-### 2. Start the application
+### Run locally
 
 ```bash
 npm run dev
 ```
 
-Once running, your terminal will display a local URL (often http://localhost:5173).  
-Open this in your browser to use the application.
+Once running, your terminal will display a local URL (often http://localhost:5173). Open this in your browser to use the application.
 
----
-
-## Build
-
-To create a production version of the application:
+### Build for production
 
 ```bash
 npm run build
 ```
 
-This generates static files in the `dist/` folder.
+The production build will be generated in the `dist/` directory and can be deployed to any static hosting service.
 
----
-
-## Deployment
-
-This is a static web application.
-
-To deploy it, upload the contents of the `dist/` folder to any static hosting platform (e.g., AWS S3, GitHub Pages, Netlify).
-
-The application requires:
-- no backend  
-- no database  
-- no server-side APIs  
-
----
-
-## Privacy
-
-- Runs entirely in the browser  
-- No backend required  
-- No data is transmitted or stored externally (unless explicitly stated)
 ---
 ## Relation to Human-AI Governance Engineering & CDD
 This tool is a concrete application within the domain of Human-AI Governance Engineering. It visibly operationalizes the principle that "decisions influenced by AI should remain transparent, traceable, and accountable."
