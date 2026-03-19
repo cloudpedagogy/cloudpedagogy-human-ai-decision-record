@@ -73,6 +73,29 @@ This tool is a concrete application within the domain of Human-AI Governance Eng
 
 Unlike typical AI capabilities, which focus on developing human competence, this tool is designed entirely through **Capability-Driven Development (CDD)**—a design method that builds systems deeply rooted in capability and governance requirements rather than mere user convenience.
 
-## 📄 License
+---
 
-Part of the CloudPedagogy ecosystem. Open-source under the MIT License.
+## Disclaimer
+
+This repository contains exploratory, framework-aligned tools developed for reflection, learning, and discussion.
+
+These tools are provided **as-is** and are not production systems, audits, or compliance instruments. Outputs are indicative only and should be interpreted in context using professional judgement.
+
+All applications are designed to run locally in the browser. No user data is collected, stored, or transmitted.
+
+---
+
+## Licensing & Scope
+
+This repository contains open-source software released under the MIT License.
+
+CloudPedagogy frameworks and related materials are licensed separately and are not embedded or enforced within this software.
+
+---
+
+## About CloudPedagogy
+
+CloudPedagogy develops open, governance-credible resources for building confident, responsible AI capability across education, research, and public service.
+
+- Website: https://www.cloudpedagogy.com/
+- Framework: https://github.com/cloudpedagogy/cloudpedagogy-ai-capability-framework
