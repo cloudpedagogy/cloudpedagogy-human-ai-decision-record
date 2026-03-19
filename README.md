@@ -25,24 +25,62 @@ Professionals, individuals, and organizations who need to ensure their AI-suppor
 ![Human-AI Decision Record Tool Screenshot](./assets/screenshot.png)
 
 
-## How to Run it
-The application is entirely static:
-1. Clone the repository.
-2. Run `npm install` and then `npm run dev` for local development.
-3. Or simply build the static files via `npm run build` and serve them using any static file server. It requires no backend, no database, and no server-side APIs.
 
-## Export Formats
-The tool allows you to export completed decision records in multiple formats for your governance workflows:
-- **JSON:** Structured machine-readable format.
-- **Markdown:** Readable structured documentation.
-- **Print-to-PDF:** A clean formal report format generated natively via the browser.
+---
+## How to Run It
 
-## Privacy & Local-First Design
-All processing happens entirely in the browser. 
-- No decision data is sent anywhere by default.
-- Records remain strictly local unless explicitly exported by the user.
-- The tool is designed to be completely safe for privacy-sensitive professional use.
+The application runs entirely in the browser but requires a local setup to run.
 
+### 1. Install dependencies
+
+Run the following command to install the required packages:
+
+```bash
+npm install
+```
+
+### 2. Start the application
+
+```bash
+npm run dev
+```
+
+Once running, your terminal will display a local URL (often http://localhost:5173).  
+Open this in your browser to use the application.
+
+---
+
+## Build
+
+To create a production version of the application:
+
+```bash
+npm run build
+```
+
+This generates static files in the `dist/` folder.
+
+---
+
+## Deployment
+
+This is a static web application.
+
+To deploy it, upload the contents of the `dist/` folder to any static hosting platform (e.g., AWS S3, GitHub Pages, Netlify).
+
+The application requires:
+- no backend  
+- no database  
+- no server-side APIs  
+
+---
+
+## Privacy
+
+- Runs entirely in the browser  
+- No backend required  
+- No data is transmitted or stored externally (unless explicitly stated)
+---
 ## Relation to Human-AI Governance Engineering & CDD
 This tool is a concrete application within the domain of Human-AI Governance Engineering. It visibly operationalizes the principle that "decisions influenced by AI should remain transparent, traceable, and accountable."
 
