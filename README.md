@@ -15,11 +15,12 @@ This tool solves that problem by producing a **Human-AI Decision Record**.
 ## Who is it For
 Professionals, individuals, and organizations who need to ensure their AI-supported decisions remain transparent, traceable, accountable, and defensible.
 
+---
 ## 🌐 Live Application
 
 👉 http://cloudpedagogy-human-ai-decision-record.s3-website.eu-west-2.amazonaws.com/
 
-
+---
 ## 🖼️ Screenshot
 
 ![Human-AI Decision Record Tool Screenshot](./assets/screenshot.png)
