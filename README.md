@@ -16,7 +16,7 @@ This tool solves that problem by producing a **Human-AI Decision Record**.
 Professionals, individuals, and organizations who need to ensure their AI-supported decisions remain transparent, traceable, accountable, and defensible.
 
 ---
-## 🌐 Live Application
+## 🌐 Live Hosted Version
 
 👉 http://cloudpedagogy-human-ai-decision-record.s3-website.eu-west-2.amazonaws.com/
 
