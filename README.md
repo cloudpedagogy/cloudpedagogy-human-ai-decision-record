@@ -59,6 +59,15 @@ npm run build
 The production build will be generated in the `dist/` directory and can be deployed to any static hosting service.
 
 ---
+
+## 🔐 Privacy & Security
+
+- **Fully local**: All data remains in the user's browser  
+- **No backend**: No external API calls or database storage  
+- **Privacy-preserving**: No tracking or data exfiltration  
+- Suitable for use in sensitive organisational and governance contexts  
+
+---
 ## Relation to Human-AI Governance Engineering & CDD
 This tool is a concrete application within the domain of Human-AI Governance Engineering. It visibly operationalizes the principle that "decisions influenced by AI should remain transparent, traceable, and accountable."
 
