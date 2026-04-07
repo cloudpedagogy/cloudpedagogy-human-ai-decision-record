@@ -10,33 +10,32 @@
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  box-shadow: var(--shadow-sm);
+  background-color: #000000;
 }
 
 .btn-secondary {
-  background-color: white;
-  color: var(--color-text-main);
-  border-color: var(--color-border);
+  background-color: #ffffff;
+  color: #111111;
+  border-color: #e5e7eb;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-bg-body);
-  border-color: var(--color-text-muted);
+  background-color: #f9fafb;
+  border-color: #d1d5db;
 }
 
 /* Sidebar Active State Fixes */
 .section-link:hover {
-  background-color: var(--color-primary-light);
+  background-color: #f9fafb;
 }
 
 .section-link.active {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary-dark);
+  background-color: #f3f4f6;
+  color: #111111;
   font-weight: 600;
 }

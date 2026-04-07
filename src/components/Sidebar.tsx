@@ -36,7 +36,7 @@ export function Sidebar() {
                     {sections.map(section => {
                         const complete = isSectionComplete(section.id);
                         return (
-                            <li key={section.id} style={{ marginBottom: '0.25rem' }}>
+                            <li key={section.id} style={{ marginBottom: '0.125rem' }}>
                                 <button
                                     className={`section-link ${activeFormSection === section.id ? 'active' : ''}`}
                                     onClick={() => setActiveFormSection(section.id)}
@@ -44,21 +44,21 @@ export function Sidebar() {
                                         width: '100%',
                                         textAlign: 'left',
                                         padding: '0.625rem 0.875rem',
-                                        fontSize: '0.9rem',
-                                        backgroundColor: activeFormSection === section.id ? 'var(--color-primary-light)' : 'transparent',
-                                        color: activeFormSection === section.id ? 'var(--color-primary-dark)' : 'var(--color-text-main)',
+                                        fontSize: '0.85rem',
+                                        backgroundColor: activeFormSection === section.id ? '#f3f4f6' : 'transparent',
+                                        color: activeFormSection === section.id ? '#111111' : '#444444',
                                         fontWeight: activeFormSection === section.id ? 600 : 400,
                                         border: 'none',
-                                        borderRadius: 'var(--radius-md)',
+                                        borderRadius: '6px',
                                         cursor: 'pointer',
                                         display: 'flex',
                                         justifyContent: 'space-between',
                                         alignItems: 'center',
-                                        transition: 'all 0.2s ease'
+                                        transition: 'all 0.1s ease'
                                     }}
                                 >
                                     <span>{section.label}</span>
-                                    {complete && <span style={{ color: 'var(--color-success)', fontSize: '0.8rem' }}>●</span>}
+                                    {complete && <span style={{ color: '#d1d5db', fontSize: '0.8rem' }}>●</span>}
                                 </button>
                             </li>
                         );

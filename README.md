@@ -1,7 +1,5 @@
 # CloudPedagogy Human-AI Decision Record Tool
 
-
-
 ## Overview
 A static, local-first web application designed as a governance instrument for recording, reviewing, and auditing decisions influenced by AI.
 
@@ -15,26 +13,23 @@ This tool solves that problem by producing a **Human-AI Decision Record**.
 ## Who is it For
 Professionals, individuals, and organizations who need to ensure their AI-supported decisions remain transparent, traceable, accountable, and defensible.
 
----
-## 🌐 Live Hosted Version
+## 🌐 Live Demo
 
 👉 http://cloudpedagogy-human-ai-decision-record.s3-website.eu-west-2.amazonaws.com/
 
----
 ## 🖼️ Screenshot
 
 ![Human-AI Decision Record Tool Screenshot](./assets/screenshot.png)
 
-
-
 ---
+
 ## 🛠️ Getting Started
 
 ### Clone the repository
 
 ```bash
-git clone [repository-url]
-cd [repository-folder]
+git clone https://github.com/cloudpedagogy/cloudpedagogy-human-ai-decision-record.git
+cd cloudpedagogy-human-ai-decision-record
 ```
 
 ### Install dependencies
@@ -69,6 +64,7 @@ The production build will be generated in the `dist/` directory and can be deplo
 - Suitable for use in sensitive organisational and governance contexts  
 
 ---
+
 ## Relation to Human-AI Governance Engineering & CDD
 This tool is a concrete application within the domain of Human-AI Governance Engineering. It visibly operationalizes the principle that "decisions influenced by AI should remain transparent, traceable, and accountable."
 

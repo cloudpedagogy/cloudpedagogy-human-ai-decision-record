@@ -20,18 +20,18 @@ export function TraceabilityPanel() {
 
     return (
         <div className="traceability-panel" style={{ padding: '1.5rem', position: 'sticky', top: 0, height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <h3 style={{ fontSize: '0.875rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>Governance Audit</h3>
+            <h3 style={{ fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#666666', marginBottom: '1.5rem' }}>Governance Audit</h3>
 
-            <div className="score-container" style={{ marginBottom: '2rem', textAlign: 'center' }}>
+            <div className="score-container" style={{ marginBottom: '2rem', textAlign: 'left' }}>
                 <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: 700, color: score === total ? 'var(--color-success)' : 'var(--color-text-main)' }}>
-                        {score}<span style={{ fontSize: '1rem', color: 'var(--color-text-muted)', fontWeight: 400 }}> / {total}</span>
+                    <div style={{ fontSize: '2rem', fontWeight: 700, color: '#111111' }}>
+                        {score}<span style={{ fontSize: '1rem', color: '#666666', fontWeight: 400 }}> / {total}</span>
                     </div>
                 </div>
-                <div style={{ height: '4px', backgroundColor: '#e2e8f0', borderRadius: '2px', marginTop: '0.5rem', overflow: 'hidden' }}>
-                    <div style={{ height: '100%', width: `${percentage}%`, backgroundColor: score === total ? 'var(--color-success)' : 'var(--color-primary)', transition: 'width 0.4s ease' }}></div>
+                <div style={{ height: '2px', backgroundColor: '#e5e7eb', borderRadius: '1px', marginTop: '0.5rem', overflow: 'hidden' }}>
+                    <div style={{ height: '100%', width: `${percentage}%`, backgroundColor: '#111111', transition: 'width 0.4s ease' }}></div>
                 </div>
-                <p style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>Traceability Index</p>
+                <p style={{ fontSize: '0.7rem', color: '#666666', marginTop: '0.5rem' }}>Traceability Index</p>
             </div>
 
             <div className="checklist-container" style={{ flex: 1 }}>
@@ -47,38 +47,38 @@ export function TraceabilityPanel() {
                             accountability: 'Accountability Assigned'
                         };
                         return (
-                            <li key={key} style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem', fontSize: '0.85rem' }}>
+                            <li key={key} style={{ marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.8rem' }}>
                                 <span style={{ 
-                                    width: '18px', 
-                                    height: '18px', 
+                                    width: '16px', 
+                                    height: '16px', 
                                     borderRadius: '50%', 
-                                    backgroundColor: passed ? 'var(--color-success)' : '#f1f5f9', 
-                                    color: passed ? 'white' : '#cbd5e1',
+                                    border: passed ? '1.5px solid #111111' : '1.5px solid #e5e7eb',
+                                    backgroundColor: passed ? '#111111' : 'transparent',
+                                    color: passed ? 'white' : 'transparent',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
                                     fontSize: '0.6rem',
-                                    marginTop: '1px',
                                     flexShrink: 0
                                 }}>
-                                    {passed ? '✓' : '○'}
+                                    {passed ? '✓' : ''}
                                 </span>
-                                <span style={{ color: passed ? 'var(--color-text-main)' : 'var(--color-text-muted)' }}>{labels[key]}</span>
+                                <span style={{ color: passed ? '#111111' : '#666666', fontWeight: passed ? 500 : 400 }}>{labels[key]}</span>
                             </li>
                         );
                     })}
                 </ul>
             </div>
 
-            <div style={{ marginTop: 'auto', paddingTop: '1.5rem', borderTop: '1px solid var(--color-border)' }}>
+            <div style={{ marginTop: 'auto', paddingTop: '1.5rem', borderTop: '1px solid #e5e7eb' }}>
                 {score === total ? (
-                    <div style={{ padding: '0.875rem', backgroundColor: '#f0fff4', borderRadius: 'var(--radius-md)', border: '1px solid #c6f6d5', color: '#166534', fontSize: '0.8rem' }}>
-                        <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Audit Pass</div>
-                        Record meets minimum governance standards for export.
+                    <div style={{ padding: '0.75rem', backgroundColor: '#ffffff', borderRadius: '6px', border: '1px solid #111111', color: '#111111', fontSize: '0.75rem' }}>
+                        <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Ready for Review</div>
+                        All governance requirements have been met.
                     </div>
                 ) : (
-                    <div style={{ padding: '0.875rem', backgroundColor: '#fff7ed', borderRadius: 'var(--radius-md)', border: '1px solid #ffedd5', color: '#9a3412', fontSize: '0.8rem' }}>
-                        <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Audit Pending</div>
+                    <div style={{ padding: '0.75rem', backgroundColor: '#ffffff', borderRadius: '6px', border: '1px solid #e5e7eb', color: '#444444', fontSize: '0.75rem' }}>
+                        <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Draft Status</div>
                         Complete {total - score} more section{total - score > 1 ? 's' : ''} to reach full traceability.
                     </div>
                 )}

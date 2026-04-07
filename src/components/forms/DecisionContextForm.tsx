@@ -11,38 +11,38 @@ export function DecisionContextForm() {
 
     return (
         <div className="form-section">
-            <h3 style={{ fontSize: '1.4rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Decision Context</h3>
-            <p style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Define the scope and nature of the decision being made.</p>
+            <h2 style={{ fontSize: '1.5rem', color: '#111111', marginBottom: '0.5rem', fontWeight: 700 }}>Decision Context</h2>
+            <p style={{ color: '#444444', marginBottom: '2rem', fontSize: '0.95rem' }}>Define the scope and nature of the decision being made.</p>
 
             <div style={{ display: 'grid', gap: '1.5rem', marginBottom: '1.5rem' }}>
                 <div>
-                    <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem' }}>Decision Context Summary *</label>
+                    <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Decision Context Summary</label>
                     <textarea
                         value={data.decision_context_summary}
                         onChange={(e) => handleChange('decision_context_summary', e.target.value)}
                         rows={4}
                         placeholder="Briefly describe the context in which this decision is taking place..."
-                        style={{ width: '100%', padding: '0.75rem', borderRadius: '4px', border: '1px solid var(--color-border)', fontSize: '1rem', fontFamily: 'inherit' }}
+                        style={{ width: '100%', padding: '0.625rem', borderRadius: '6px', border: '1px solid #e5e7eb', fontSize: '0.9rem', fontFamily: 'inherit' }}
                     />
                 </div>
 
                 <div>
-                    <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem' }}>Problem or Question being addressed</label>
+                    <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Problem or Question being addressed</label>
                     <input
                         type="text"
                         value={data.problem_or_question}
                         onChange={(e) => handleChange('problem_or_question', e.target.value)}
-                        style={{ width: '100%', padding: '0.75rem', borderRadius: '4px', border: '1px solid var(--color-border)', fontSize: '1rem' }}
+                        style={{ width: '100%', padding: '0.625rem', borderRadius: '6px', border: '1px solid #e5e7eb', fontSize: '0.9rem' }}
                     />
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
                     <div>
-                        <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem' }}>Decision Type</label>
+                        <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Decision Type</label>
                         <select
                             value={data.decision_type}
                             onChange={(e) => handleChange('decision_type', e.target.value)}
-                            style={{ width: '100%', padding: '0.75rem', borderRadius: '4px', border: '1px solid var(--color-border)', fontSize: '1rem', backgroundColor: 'white' }}
+                            style={{ width: '100%', padding: '0.625rem', borderRadius: '6px', border: '1px solid #e5e7eb', fontSize: '0.9rem', backgroundColor: 'white' }}
                         >
                             <option value="">Select a type...</option>
                             <option value="policy">Policy</option>
@@ -56,11 +56,11 @@ export function DecisionContextForm() {
                         </select>
                     </div>
                     <div>
-                        <label style={{ display: 'block', fontWeight: 600, marginBottom: '0.5rem' }}>Impact Level</label>
+                        <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Impact Level</label>
                         <select
                             value={data.impact_level}
                             onChange={(e) => handleChange('impact_level', e.target.value)}
-                            style={{ width: '100%', padding: '0.75rem', borderRadius: '4px', border: '1px solid var(--color-border)', fontSize: '1rem', backgroundColor: 'white' }}
+                            style={{ width: '100%', padding: '0.625rem', borderRadius: '6px', border: '1px solid #e5e7eb', fontSize: '0.9rem', backgroundColor: 'white' }}
                         >
                             <option value="">Select impact level...</option>
                             <option value="low">Low Impact</option>
