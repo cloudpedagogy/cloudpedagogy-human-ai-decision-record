@@ -30,26 +30,26 @@ export function Sidebar() {
     };
 
     return (
-        <div className="sidebar-container" style={{ padding: '1.5rem 1rem', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <div className="sidebar-container" style={{ padding: 'var(--spacing-lg) var(--spacing-md)', display: 'flex', flexDirection: 'column', height: '100%' }}>
             <nav aria-label="Decision Record Sections" style={{ flex: 1 }}>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {sections.map(section => {
                         const complete = isSectionComplete(section.id);
                         return (
-                            <li key={section.id} style={{ marginBottom: '0.125rem' }}>
+                            <li key={section.id} style={{ marginBottom: '2px' }}>
                                 <button
                                     className={`section-link ${activeFormSection === section.id ? 'active' : ''}`}
                                     onClick={() => setActiveFormSection(section.id)}
                                     style={{
                                         width: '100%',
                                         textAlign: 'left',
-                                        padding: '0.625rem 0.875rem',
-                                        fontSize: '0.85rem',
-                                        backgroundColor: activeFormSection === section.id ? '#f3f4f6' : 'transparent',
-                                        color: activeFormSection === section.id ? '#111111' : '#444444',
+                                        padding: 'var(--spacing-sm) var(--spacing-md)',
+                                        fontSize: 'var(--font-size-meta)',
+                                        backgroundColor: activeFormSection === section.id ? 'var(--color-primary-light)' : 'transparent',
+                                        color: activeFormSection === section.id ? 'var(--color-text-primary)' : 'var(--color-text-secondary)',
                                         fontWeight: activeFormSection === section.id ? 600 : 400,
                                         border: 'none',
-                                        borderRadius: '6px',
+                                        borderRadius: 'var(--radius-md)',
                                         cursor: 'pointer',
                                         display: 'flex',
                                         justifyContent: 'space-between',
@@ -58,7 +58,7 @@ export function Sidebar() {
                                     }}
                                 >
                                     <span>{section.label}</span>
-                                    {complete && <span style={{ color: '#d1d5db', fontSize: '0.8rem' }}>●</span>}
+                                    {complete && <span style={{ color: 'var(--color-border-default)', fontSize: '10px' }}>●</span>}
                                 </button>
                             </li>
                         );
@@ -66,11 +66,11 @@ export function Sidebar() {
                 </ul>
             </nav>
 
-            <div style={{ marginTop: 'auto', borderTop: '1px solid var(--color-border)', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <div style={{ marginTop: 'auto', borderTop: '1px solid var(--color-border-default)', paddingTop: 'var(--spacing-lg)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)' }}>
                 <button
                     onClick={() => setCurrentView('preview')}
                     className="btn-primary"
-                    style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                    style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--spacing-sm)' }}
                 >
                     Review & Export
                 </button>

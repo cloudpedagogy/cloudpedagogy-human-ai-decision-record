@@ -1,34 +1,37 @@
 :root {
-  /* Legacy Variables */
-  --color-primary: #111111;
+  /* Design Tokens */
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+  
+  --color-border-default: #e0e0e0;
+  --color-border-strong: #000000;
+
+  --font-size-body: 14px;
+  --font-size-meta: 13px;
+  --font-size-small: 12px;
+
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+
+  /* Theme Support */
+  --color-primary: var(--color-text-primary);
   --color-primary-light: #f9fafb;
   --color-primary-dark: #000000;
   
   --color-bg-body: #ffffff;
   --color-bg-panel: #ffffff;
   
-  --color-text-main: #111111;
-  --color-text-muted: #666666;
-  --color-text-dim: #666666;
+  --color-text-main: var(--color-text-primary);
+  --color-text-muted: var(--color-text-secondary);
+  --color-text-dim: var(--color-text-secondary);
   
-  --border-color: #e5e7eb;
-  --color-border: #e5e7eb;
+  --border-color: var(--color-border-default);
+  --color-border: var(--color-border-default);
 
-  /* New Design Tokens */
-  --color-text-primary: #111111;
-  --color-text-secondary: #666666;
-  --color-border-default: #e0e0e0;
-  --color-border-strong: #000000;
-  --font-size-body: 14px;
-  --font-size-meta: 13px;
-  --font-size-small: 13px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  
-  --color-success: #444444; /* Neutralized */
-  --color-warning: #444444; /* Neutralized */
-  --color-danger: #111111; /* Desaturated */
+  --color-success: #444444;
+  --color-warning: #444444;
+  --color-danger: #111111;
 
   /* Shadows & Radius */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -38,16 +41,15 @@
 
   /* Typography */
   --font-family-main: system-ui, -apple-system, sans-serif;
-  --font-family-serif: system-ui, -apple-system, sans-serif; /* Simplified as requested */
   
-  --text: var(--color-text-muted);
-  --text-h: var(--color-text-main);
+  --text: var(--color-text-secondary);
+  --text-h: var(--color-text-primary);
   --bg: var(--color-bg-body);
-  --border: var(--color-border);
+  --border: var(--color-border-default);
   --code-bg: #f3f4f6;
   --accent: var(--color-primary);
   --accent-bg: var(--color-primary-light);
-  --accent-border: var(--color-border);
+  --accent-border: var(--color-border-default);
   --shadow: var(--shadow-sm);
 
   font: var(--font-size-body)/1.6 var(--font-family-main);

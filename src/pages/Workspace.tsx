@@ -27,7 +27,7 @@ export function Workspace() {
 
     return (
         <div className="workspace-container">
-            <div className="form-content-area" style={{ backgroundColor: 'white', padding: '2rem', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--color-border)' }}>
+            <div className="form-content-area" style={{ backgroundColor: 'var(--color-bg-body)', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--color-border-default)' }}>
                 {renderSection()}
             </div>
         </div>
