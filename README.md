@@ -3,6 +3,25 @@
 ## Overview
 A static, local-first web application designed as a governance instrument for recording, reviewing, and auditing decisions influenced by AI.
 
+## 🔗 Role in the CloudPedagogy Ecosystem
+
+**Phase:** Phase 2 — Governance Pipeline
+
+**Role:**
+Records and audits individual decision-making outcomes to ensure human-AI traceability and accountability.
+
+**Upstream Inputs:**
+Workflow context and required fields from the **Governance Designer** and systemic risk signals from the **Risk Scanner**.
+
+**Downstream Outputs:**
+Generates structured decision records (JSON/Markdown) for institutional audit buckets and strategic **Maturity Assessments**.
+
+**Does NOT:**
+- Perform systemic risk audits across full workflows.
+- Design governance structures or define institutional policies.
+
+For a full system overview, see: [SYSTEM_OVERVIEW.md](../SYSTEM_OVERVIEW.md)
+
 This application belongs to the Human-AI Governance Engineering area of the CloudPedagogy ecosystem. It serves as a proof-of-concept for Capability-Driven Development (CDD), demonstrating how software can be designed to intrinsically support transparent, accountable, traceable, and defensible human-AI decision-making.
 
 ## Why it Exists
@@ -20,6 +39,24 @@ Professionals, individuals, and organizations who need to ensure their AI-suppor
 ## 🖼️ Screenshot
 
 ![Human-AI Decision Record Tool Screenshot](./assets/screenshot.png)
+
+---
+
+## 🧩 Core Features
+
+### Audit Readiness Scoring
+Each decision record is automatically evaluated for completeness against institutional governance requirements.
+- **Golden Fields**: The score is calculated based on 8 mandatory fields (Record Title, Problem/Question, Impact Level, Final Outcome/Rationale, Accountable Role, and AI Use Declaration).
+- **Dynamic Feedback**: Missing required fields reduce the audit readiness score in real-time, highlighting exactly where defensibility is weak.
+
+### Batch Register
+A local-first management system for handling multiple decision-making cycles.
+- **Persistence**: Save and retrieve multiple records directly within the browser using `localStorage`.
+- **Log Management**: A structured view for reviewing, editing, and deleting archived records without backend dependency.
+
+### Governance-Ready Export
+- Generate standardized **JSON** or **Markdown** reports.
+- **Print-Optimized**: Formal letterhead format suitable for PDF conversion and institutional evidence bundles.
 
 ---
 

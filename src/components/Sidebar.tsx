@@ -68,6 +68,13 @@ export function Sidebar() {
 
             <div style={{ marginTop: 'auto', borderTop: '1px solid var(--color-border-default)', paddingTop: 'var(--spacing-lg)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-sm)' }}>
                 <button
+                    onClick={() => setCurrentView('register')}
+                    className="btn-secondary"
+                    style={{ width: '100%', borderColor: 'var(--color-primary-default)', color: 'var(--color-primary-default)' }}
+                >
+                    Batch Register Log
+                </button>
+                <button
                     onClick={() => setCurrentView('preview')}
                     className="btn-primary"
                     style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'var(--spacing-sm)' }}

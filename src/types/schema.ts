@@ -11,6 +11,7 @@ export interface RecordMetadata {
     created_by_role: string;
     organisation: string;
     team_or_department: string;
+    workflow_step_id?: string;
 }
 
 export interface DecisionContext {
@@ -109,7 +110,8 @@ export const initialDecisionRecord: DecisionRecord = {
         created_by_name: '',
         created_by_role: '',
         organisation: '',
-        team_or_department: ''
+        team_or_department: '',
+        workflow_step_id: ''
     },
     DecisionContext: {
         decision_context_summary: '',

@@ -17,7 +17,7 @@ export function Preview() {
                 try {
                     const uploadedRecord = JSON.parse(e.target?.result as string);
                     setFullRecord(uploadedRecord);
-                } catch (error) {
+                } catch {
                     alert('Failed to parse JSON file');
                 }
             };

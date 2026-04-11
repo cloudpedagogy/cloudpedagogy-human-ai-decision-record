@@ -56,13 +56,13 @@ export function DecisionContextForm() {
                         </select>
                     </div>
                     <div>
-                        <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Impact Level</label>
+                        <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.5rem', color: '#111111' }}>Decision Criticality</label>
                         <select
                             value={data.impact_level}
                             onChange={(e) => handleChange('impact_level', e.target.value)}
                             style={{ width: '100%', padding: '0.625rem', borderRadius: '6px', border: '1px solid #e5e7eb', fontSize: '0.9rem', backgroundColor: 'white' }}
                         >
-                            <option value="">Select impact level...</option>
+                            <option value="">Select criticality...</option>
                             <option value="low">Low Impact</option>
                             <option value="medium">Medium Impact</option>
                             <option value="high">High Impact</option>

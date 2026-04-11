@@ -45,8 +45,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     </aside>
                 )}
 
+                {currentView === 'register' && (
+                    <aside className="app-sidebar" style={{ width: '260px', borderRight: '1px solid var(--color-border-default)', backgroundColor: 'var(--color-bg-body)', overflowY: 'auto' }}>
+                        <Sidebar />
+                    </aside>
+                )}
+
                 <main className="app-main-content" style={{ flex: 1, padding: 'var(--spacing-lg)', overflowY: 'auto', backgroundColor: 'var(--color-bg-body)' }}>
-                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <div style={{ maxWidth: currentView === 'register' ? '1160px' : '800px', margin: '0 auto' }}>
                         {children}
                     </div>
                 </main>

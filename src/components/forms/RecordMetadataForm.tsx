@@ -67,6 +67,17 @@ export function RecordMetadataForm() {
                         />
                     </div>
                 </div>
+
+                <div>
+                    <label style={{ display: 'block', fontSize: 'var(--font-size-meta)', fontWeight: 600, marginBottom: 'var(--spacing-sm)', color: 'var(--color-text-primary)' }}>Workflow Step ID Reference</label>
+                    <input
+                        type="text"
+                        value={data.workflow_step_id || ''}
+                        onChange={(e) => handleChange('workflow_step_id' as keyof RecordMetadata, e.target.value)}
+                        placeholder="e.g., WF-STEP-101"
+                        style={{ width: '100%', padding: 'var(--spacing-sm)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border-default)', fontSize: 'var(--font-size-meta)' }}
+                    />
+                </div>
             </div>
         </div>
     );

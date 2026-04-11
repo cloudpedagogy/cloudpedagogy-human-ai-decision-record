@@ -1,4 +1,5 @@
 import type { DecisionRecord } from '../types/schema';
+import { calculateAuditScore } from './auditUtils';
 
 export function exportToJson(record: DecisionRecord) {
     const dataStr = JSON.stringify(record, null, 2);
@@ -17,8 +18,11 @@ export function exportToMarkdown(record: DecisionRecord) {
 # Human-AI Decision Record
 **Title:** ${record.Metadata.record_title || 'Untitled'}
 **ID:** ${record.Metadata.record_id}
+**Workflow Step ID:** ${record.Metadata.workflow_step_id || 'N/A'}
 **Date:** ${new Date(record.Metadata.date_created).toLocaleDateString()}
 **Status:** ${record.Metadata.status.toUpperCase()}
+**Audit Readiness Score:** ${calculateAuditScore(record)}%
+
 
 ## 1. Context
 **Summary:** ${record.DecisionContext.decision_context_summary}
