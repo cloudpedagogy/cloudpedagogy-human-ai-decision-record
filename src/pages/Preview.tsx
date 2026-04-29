@@ -222,6 +222,18 @@ export function Preview() {
                     </div>
                 </div>
 
+                <div className="report-section">
+                    <h2>05. Capability & Governance (Optional)</h2>
+                    <div className="report-field">
+                        <span className="report-label">Capability Development Notes</span>
+                        <div className="report-value">{record.CapabilityGovernance?.capabilityNotes || '—'}</div>
+                    </div>
+                    <div className="report-field">
+                        <span className="report-label">Additional Governance Notes</span>
+                        <div className="report-value">{record.CapabilityGovernance?.governanceNotes || '—'}</div>
+                    </div>
+                </div>
+
                 <div className="report-section" style={{ 
                     backgroundColor: '#ffffff', 
                     padding: '3rem', 
@@ -229,7 +241,7 @@ export function Preview() {
                     border: '4px solid #111111',
                     marginTop: '5rem'
                 }}>
-                    <h2 style={{ borderBottom: 'none', marginBottom: '2.5rem', paddingBottom: 0 }}>05. Final Decision Outcome</h2>
+                    <h2 style={{ borderBottom: 'none', marginBottom: '2.5rem', paddingBottom: 0 }}>06. Final Decision Outcome</h2>
                     <div className="report-field">
                         <span className="report-label">Formal Decision</span>
                         <div className="report-value" style={{ fontWeight: 800, fontSize: '1.4rem' }}>{record.DecisionOutcome.final_decision || '—'}</div>

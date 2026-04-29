@@ -9,6 +9,8 @@ import { DecisionOutcomeForm } from '../components/forms/DecisionOutcomeForm';
 import { ReflectionForm } from '../components/forms/ReflectionForm';
 import { calculateAuditScore } from '../utils/auditUtils';
 
+import { CapabilityGovernanceForm } from '../components/forms/CapabilityGovernanceForm';
+
 export function Workspace() {
     const { activeFormSection: activeSection, record, saveToRegister } = useAppContext();
     const auditScore = calculateAuditScore(record);
@@ -53,6 +55,7 @@ export function Workspace() {
             </div>
             <div className="form-content-area" style={{ backgroundColor: 'var(--color-bg-body)', padding: 'var(--spacing-lg)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-sm)', border: '1px solid var(--color-border-default)' }}>
                 {renderSection()}
+                <CapabilityGovernanceForm />
             </div>
         </div>
     );

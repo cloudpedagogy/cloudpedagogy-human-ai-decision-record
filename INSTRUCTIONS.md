@@ -47,3 +47,10 @@ This tool acts as an official, auditable ledger for documenting individual insta
 ---
 ### 10. Tips
 - The "Human Rationale" field is the most legally and ethically significant part of this record. Always be specific about *why* you agreed or disagreed with the AI.
+
+---
+### 11. Capability and Governance
+This tool supports both AI capability development and lightweight governance.
+- **Capability Development**: The tool encourages users to reflect on how AI involvement affects the decision-making process, building professional judgement.
+- **Governance Support**: Through optional fields, assumptions, risks, and rationale are made visible for audit and accountability.
+- **Optional Fields**: All capability and governance notes are optional, supporting professional autonomy.

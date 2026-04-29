@@ -20,7 +20,6 @@ Generates structured decision records (JSON/Markdown) for institutional audit bu
 - Perform systemic risk audits across full workflows.
 - Design governance structures or define institutional policies.
 
-For a full system overview, see: [SYSTEM_OVERVIEW.md](../SYSTEM_OVERVIEW.md)
 
 This application belongs to the Human-AI Governance Engineering area of the CloudPedagogy ecosystem. It serves as a proof-of-concept for Capability-Driven Development (CDD), demonstrating how software can be designed to intrinsically support transparent, accountable, traceable, and defensible human-AI decision-making.
 
@@ -126,6 +125,14 @@ All example data and structures are synthetic and do not represent any real inst
 This repository contains open-source software released under the MIT License.
 
 CloudPedagogy frameworks and related materials are licensed separately and are not embedded or enforced within this software.
+
+---
+
+## Capability and Governance
+This tool supports both AI capability development and lightweight governance.
+- **Capability** is developed through structured interaction with real workflows
+- **Governance** is supported through optional fields that make assumptions, risks, and decisions visible
+All governance inputs are optional and designed to support — not constrain — professional judgement.
 
 ---
 

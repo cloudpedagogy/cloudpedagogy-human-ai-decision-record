@@ -61,6 +61,10 @@ export function exportToMarkdown(record: DecisionRecord) {
 **Rationale:** ${record.DecisionOutcome.rationale}
 **Accountability:** ${record.DecisionOutcome.accountable_decision_maker} (${record.DecisionOutcome.accountable_role})
 **Implementation:** ${record.DecisionOutcome.implementation_considerations}
+
+## 7. Capability & Governance (Optional)
+**Capability Notes:** ${record.CapabilityGovernance?.capabilityNotes || 'N/A'}
+**Governance Notes:** ${record.CapabilityGovernance?.governanceNotes || 'N/A'}
 `.trim();
 
     const dataUri = 'data:text/markdown;charset=utf-8,' + encodeURIComponent(md);

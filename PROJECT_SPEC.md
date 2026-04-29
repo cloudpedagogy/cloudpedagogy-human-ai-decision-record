@@ -56,4 +56,9 @@ The only tool in the ecosystem that explicitly treats "Human-AI Disagreement" as
 (Inferred) Support for digital signatures for verifiable audit trails; integration with institutional "Decision Registers."
 
 ## 15. Anything Unclear or Inferred from Repo Contents
-Standardized reliance levels (e.g. "Advisory" vs "Delegated") are inferred to match institutional policy definitions.
+
+## 16. Capability and Governance Alignment
+This tool is aligned with the CloudPedagogy Capability and Governance standard.
+- **Capability**: The tool supports development of practical AI capability through structured interaction and workflow use.
+- **Governance**: The tool includes lightweight, optional fields that make assumptions, risks, and decisions visible and reviewable.
+This alignment ensures the tool supports both effective use of AI and responsible, accountable practice.

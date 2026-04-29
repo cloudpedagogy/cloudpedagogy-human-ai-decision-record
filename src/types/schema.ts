@@ -88,6 +88,11 @@ export interface Reflection {
     reflection_notes: string;
 }
 
+export interface CapabilityGovernance {
+    capabilityNotes?: string;
+    governanceNotes?: string;
+}
+
 export interface DecisionRecord {
     Metadata: RecordMetadata;
     DecisionContext: DecisionContext;
@@ -97,6 +102,7 @@ export interface DecisionRecord {
     RisksAndSafeguards: RisksAndSafeguards;
     DecisionOutcome: DecisionOutcome;
     Reflection: Reflection;
+    CapabilityGovernance?: CapabilityGovernance;
 }
 
 export const initialDecisionRecord: DecisionRecord = {
@@ -179,5 +185,9 @@ export const initialDecisionRecord: DecisionRecord = {
         lessons_learned: '',
         workflow_improvements: '',
         reflection_notes: ''
+    },
+    CapabilityGovernance: {
+        capabilityNotes: '',
+        governanceNotes: ''
     }
 };
